@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400&display=swap&subset=cyrillic');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Jura, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fbe9e7;
+  background: #263238;
+}
+
+h1,
+h2,
+h3 {
+  color: #ff6f00;
+}
+
+.tales-list a {
+  text-decoration: none;
+  color: #ff6f00;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.tales-list {
+  list-style-type: none;
+  counter-reset: section;
+}
+
+.tales-list li::before {
+  counter-increment: section;
+  content: counter(section, decimal-leading-zero) ": ";
+}
+
+.player img {
+  width: 150px;
+}
